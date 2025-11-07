@@ -9,7 +9,7 @@ class ConnectionError(ABC, Exception, LoggingMixin):
 
 class SpeakerConnectionError(ConnectionError):
     def __str__(self):
-        self.log(f"Light connection error occurred")
+        self.log(f"Speaker connection error occurred")
         return "Speaker connection error"
 
 class LightConnectionError(ConnectionError):
