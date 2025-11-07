@@ -16,5 +16,4 @@ if __name__ == '__main__':
     print(get_sum_of_numbers(
         num1=1,
         num2=5
-    )
-    )
+    ))

@@ -1,4 +1,4 @@
-from mixins_using.speaker import Speaker
+from seminars.mixins_using.speaker import Speaker
 
 speaker = Speaker(
     speaker_id=111111,

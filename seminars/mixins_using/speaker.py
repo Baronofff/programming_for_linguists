@@ -1,6 +1,6 @@
 import random
 
-from mixins_using.errors import SpeakerConnectionError
+from seminars.mixins_using.errors import SpeakerConnectionError
 
 
 class Speaker:

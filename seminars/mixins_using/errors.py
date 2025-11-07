@@ -1,6 +1,6 @@
 from abc import ABC
 
-from mixins_using.mixins import LoggingMixin
+from seminars.mixins_using.mixins import LoggingMixin
 
 
 class ConnectionError(ABC, Exception, LoggingMixin):
