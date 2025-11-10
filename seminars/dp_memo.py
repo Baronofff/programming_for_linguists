@@ -1,7 +1,7 @@
 import time
 
 # Кеш для хранения уже вычисленных значений fib(k)
-memo_fib = ...
+memo_fib = {0: 0, 1: 1}
 
 def fib_memo(n):
     """Вычисляет числа Фибоначчи с использованием мемоизации (явный кеш)."""
@@ -11,25 +11,22 @@ def fib_memo(n):
         raise ValueError("N должно быть >= 0")
 
     # 1. Проверка кеша
-    print(f"Нашли fib({n})={...} в кеше!")
-    ...
-
-    # 2. Базовый случай
-    if ...
+    if n in memo_fib:
+        value = memo_fib[n]
+        print(f"Нашли fib({n})={value} в кеше!")
+        return value
     # 3. Рекурсивный шаг (если не в кеше и не базовый случай)
-    else:
-        print(f"Вычисляем fib({n})")
-        ...
-
+    print(f"Вычисляем fib({n})")
+    number = fib_memo(n - 1) + fib_memo(n - 2)
     # 4. Сохранение в кеш ПЕРЕД возвратом
-    print(f"Сохраняем fib({n}) = {...} в кеш")
-    ...
+    print(f"Сохраняем fib({n}) = {number} в кеш")
+    memo_fib[n] = number
 
     # 5. Возврат
-    return ...
+    return number
 
 if __name__ == "__main__":
-    n_val = 30
+    n_val = 5
     print(f"\n--- Вычисляем fib({n_val}) с мемоизацией ---")
     start_time = time.perf_counter()
     result_memo = fib_memo(n_val)
