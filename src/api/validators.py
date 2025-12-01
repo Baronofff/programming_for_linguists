@@ -13,9 +13,7 @@ def validate_file_extension(filename: str) -> bool:
     """
     _, extension = os.path.splitext(filename)
 
-    if extension != '.wav':
-        return False
-    return True
+    return extension == '.wav'
 
 
 def validate_file_size(file_size: int, max_size_mb: int = 50) -> bool:

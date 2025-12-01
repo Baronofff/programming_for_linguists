@@ -1,10 +1,9 @@
 from fastapi import APIRouter
 
+router = APIRouter(prefix='/api/v1', tags=['transcription'])
 
-router = APIRouter(prefix="/api/v1", tags=["transcription"])
 
-
-@router.post("/transcribe", summary="Транскрибация аудиофайла")
+@router.post('/transcribe', summary='Транскрибация аудиофайла')
 async def transcribe(file):
     """
     Принимает аудиофайл в формате .wav и возвращает его текстовую транскрипцию.

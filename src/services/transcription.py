@@ -1,6 +1,7 @@
 from typing import Optional
 
 import speech_recognition as sr
+
 r = sr.Recognizer()
 
 
@@ -20,6 +21,6 @@ def get_transcription(path: str) -> Optional[str]:
             pass
 
     except FileNotFoundError:
-        raise FileNotFoundError(f"Аудиофайл не найден по пути: {""}")
+        raise FileNotFoundError(f'Аудиофайл не найден по пути: {""}')
     except IOError:
-        raise ValueError(f"Невозможно прочитать файл или неподдерживаемый формат: {""}")
+        raise ValueError(f'Невозможно прочитать файл или неподдерживаемый формат: {""}')
