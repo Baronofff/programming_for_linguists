@@ -1,7 +1,7 @@
 [project]
 name = "programming-for-linguists"
 version = "0.1.0"
-description = ""
+description = "text-to-speech"
 authors = [
     {name = "baronofff",email = "baronov.ev@gmail.com"}
 ]
